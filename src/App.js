@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PartyDetails from "./components/PartyDetails/partyDetails";
+import RSVPForm from "./components/RSVPForm/RSVPForm";
+import Footer from "./components/Footer/footer";
+import HeroSection from "./components/HeroSection/index";
+import CountdownTimer from "./components/CountdownTimer/countdownTimer";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeroSection />
+      <CountdownTimer />
+      <PartyDetails />
+      <RSVPForm />
+      <Footer />
     </div>
   );
 }

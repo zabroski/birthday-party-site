@@ -1,0 +1,51 @@
+.party-details {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #fffaf0, #fff0f5);
+}
+
+.party-details h2 {
+  font-size: 2rem;
+  color: #ff69b4;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.details-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  display: inline-block;
+  text-align: left;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
+  max-width: 400px;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.details-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(255, 105, 180, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details-card {
+    padding: 20px 25px;
+    font-size: 0.95rem;
+    width: 90%;
+  }
+
+  .party-details h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-card {
+    font-size: 0.9rem;
+    padding: 18px;
+  }
+}
+

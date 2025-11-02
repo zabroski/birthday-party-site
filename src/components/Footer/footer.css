@@ -1,0 +1,27 @@
+.footer {
+  text-align: center;
+  background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+  color: white;
+  padding: 25px 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.footer small {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 1rem;
+  }
+
+  .footer small {
+    font-size: 0.85rem;
+  }
+}

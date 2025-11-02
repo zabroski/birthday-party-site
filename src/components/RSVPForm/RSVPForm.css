@@ -1,0 +1,148 @@
+/* === RSVP SECTION === */
+.rsvp-section {
+  background: linear-gradient(135deg, #fff0f5 0%, #fdf6ff 100%);
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.rsvp-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff4fa3;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === RSVP FORM CARD === */
+.rsvp-form {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 40px 35px;
+  max-width: 420px;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 2px solid #ffd6e8;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.25);
+}
+
+/* Floating Labels */
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: transparent;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 14px;
+  background: #fffafc;
+  color: #ff69b4;
+  font-size: 0.85rem;
+  padding: 0 6px;
+}
+
+/* Button */
+.submit-btn {
+  background: linear-gradient(135deg, #ff69b4, #ff85c1);
+  border: none;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #ff85c1, #ffa6d5);
+  transform: scale(1.03);
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+}
+
+/* Thank You */
+.thank-you {
+  font-size: 1.2rem;
+  color: #ff69b4;
+  font-weight: 500;
+  background: #fff5fb;
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(255, 192, 203, 0.25);
+}
+
+/* === RESPONSIVE FIXES === */
+@media (max-width: 768px) {
+  .rsvp-form {
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+
+  .rsvp-title {
+    font-size: 1.6rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .thank-you {
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rsvp-section {
+    padding: 50px 10px;
+  }
+
+  .rsvp-form {
+    padding: 25px 15px;
+  }
+
+  .rsvp-title {
+    font-size: 1.4rem;
+  }
+}
