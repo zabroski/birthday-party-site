@@ -93,6 +93,18 @@
   box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
 }
 
+.thank-you {
+  font-size: 1.1rem;
+  color: #ff69b4;
+  background: #fff5fb;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+
 /* Thank You */
 .thank-you {
   font-size: 1.2rem;
