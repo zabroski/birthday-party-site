@@ -12,7 +12,7 @@ import Confetti from "react-confetti";
 import { motion } from "framer-motion";
 import "./RSVPForm.css";
 
-const MAX_GUESTS = 40;
+const MAX_GUESTS = 20;
 
 const RSVPForm = () => {
   const [form, setForm] = useState({ name: "", guests: 1, message: "" });

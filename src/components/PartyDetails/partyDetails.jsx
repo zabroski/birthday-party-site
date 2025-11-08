@@ -1,22 +1,3 @@
-
-// import React from "react";
-// import "./partyDetails.css";
-
-// const PartyDetails = () => (
-//   <section className="party-details">
-//     <h2>🎧 Party Details</h2>
-//     <div className="details-card">
-//       <p><strong>Theme:</strong> DJ 🚀</p>
-//       <p><strong>Dress Code:</strong> All Black & Fun 🖤</p>
-//       <p><strong>Vibes:</strong> Snacks, Food, Drinks, Music, and Surprises for everyone!</p>
-//     </div>
-//   </section>
-// );
-
-// export default PartyDetails;
-
-
-
 import React from "react";
 import { motion } from "framer-motion";
 import "./partyDetails.css";
@@ -36,7 +17,7 @@ const PartyDetails = () => (
       transition={{ type: "spring", stiffness: 200 }}
     >
       <p><strong>Theme:</strong> DJ 🚀</p>
-      <p><strong>Dress Code:</strong> All Black & Fun 🖤</p>
+      <p><strong>Dress Code:</strong> Black and White & Fun 🖤</p>
       <p><strong>Vibes:</strong> Snacks, Food, Drinks, Music, and Surprises!</p>
     </motion.div>
   </motion.section>
