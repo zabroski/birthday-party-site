@@ -4,12 +4,14 @@ import RSVPForm from "./components/RSVPForm/RSVPForm";
 import Footer from "./components/Footer/footer";
 import HeroSection from "./components/HeroSection/index";
 import CountdownTimer from "./components/CountdownTimer/countdownTimer";
-
-import "./App.css";
+import LimitedPartyNotice from "./components/LimitedPartyNotice/LimitedPartyNotice";
 
 function App() {
   return (
     <div className="App">
+      {/* 🔔 Big popup notice on page load */}
+      <LimitedPartyNotice />
+
       <HeroSection />
       <CountdownTimer />
       <PartyDetails />

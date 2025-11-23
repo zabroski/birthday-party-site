@@ -1,16 +1,38 @@
+/* === GLOBAL MOBILE FIX === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* === RSVP SECTION === */
 .rsvp-section {
-  background: linear-gradient(135deg, #fff0f5 0%, #fdf6ff 100%);
+  background: linear-gradient(135deg, #fffaf0, #fff0f5);
   text-align: center;
   padding: 70px 20px;
 }
 
+/* Inner wrapper to control width */
+.rsvp-inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Title */
 .rsvp-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #ff4fa3;
-  margin-bottom: 30px;
+  color: #f53646;
+  margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
+}
+
+/* Remaining spots text */
+.remaining {
+  font-size: 0.98rem;
+  color: #ff69b4;
+  margin-bottom: 25px;
+  font-weight: 500;
 }
 
 /* === RSVP FORM CARD === */
@@ -20,17 +42,26 @@
   backdrop-filter: blur(10px);
   border-radius: 25px;
   padding: 40px 35px;
-  max-width: 420px;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
 }
 
+/* Make sure nothing overflows horizontally */
+.rsvp-section,
+.rsvp-form {
+  overflow: hidden;
+}
+
+/* === INPUT GROUPS === */
 .input-group {
   position: relative;
   margin-bottom: 25px;
+  text-align: left;
 }
 
-/* Inputs */
+/* Inputs & Textarea */
 .input-group input,
 .input-group textarea {
   width: 100%;
@@ -42,6 +73,7 @@
   outline: none;
   color: #333;
   transition: all 0.3s ease;
+  resize: vertical;
 }
 
 .input-group input:focus,
@@ -50,8 +82,9 @@
   box-shadow: 0 0 8px rgba(255, 105, 180, 0.25);
 }
 
-/* Floating Labels */
-.input-group label {
+/* === FLOATING LABELS === */
+.input-group input + label,
+.input-group textarea + label {
   position: absolute;
   top: 12px;
   left: 16px;
@@ -73,9 +106,51 @@
   padding: 0 6px;
 }
 
-/* Button */
+/* === NEW ATTENDING CHOICE (CARD BUTTONS) === */
+
+.attending-group {
+  margin-top: 5px;
+}
+
+.choice-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.choice-row {
+  display: flex;
+  gap: 12px;
+}
+
+.choice-card {
+  flex: 1;
+  padding: 14px 0;
+  background: #fff5fb;
+  border-radius: 12px;
+  border: 2px solid #ffd6e8;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.choice-card:hover {
+  border-color: #ff69b4;
+}
+
+.choice-card.selected {
+  background: #ff69b4;
+  color: white;
+  border-color: #ff69b4;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.25);
+}
+
+/* === BUTTON === */
 .submit-btn {
-  background: linear-gradient(135deg, #ff69b4, #ff85c1);
+  background: #f53646;
   border: none;
   color: white;
   padding: 14px 25px;
@@ -93,45 +168,46 @@
   box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
 }
 
+/* === THANK YOU MESSAGE === */
 .thank-you {
-  font-size: 1.1rem;
-  color: #ff69b4;
-  background: #fff5fb;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 0 auto;
-  max-width: 400px;
-  line-height: 1.5;
-}
-
-
-/* Thank You */
-.thank-you {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: #ff69b4;
   font-weight: 500;
   background: #fff5fb;
-  display: inline-block;
-  padding: 20px 30px;
+  display: block;
+  padding: 18px 20px;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(255, 192, 203, 0.25);
+  margin: 20px auto;
+  line-height: 1.5;
 }
 
 /* === RESPONSIVE FIXES === */
 @media (max-width: 768px) {
+  .rsvp-section {
+    padding: 50px 16px;
+  }
+
+  .rsvp-inner {
+    max-width: 100%;
+  }
+
   .rsvp-form {
-    width: 100%;
-    padding: 30px 20px;
-    border-radius: 15px;
+    padding: 28px 18px;
+    border-radius: 18px;
   }
 
   .rsvp-title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+  }
+
+  .remaining {
+    font-size: 0.9rem;
   }
 
   .submit-btn {
     font-size: 0.95rem;
-    padding: 12px 20px;
+    padding: 12px 18px;
   }
 
   .input-group input,
@@ -141,21 +217,39 @@
   }
 
   .thank-you {
-    font-size: 1rem;
-    padding: 15px 20px;
+    font-size: 0.98rem;
+    padding: 15px 16px;
   }
 }
 
 @media (max-width: 480px) {
   .rsvp-section {
-    padding: 50px 10px;
+    padding: 40px 12px;
   }
 
   .rsvp-form {
-    padding: 25px 15px;
+    padding: 22px 14px;
   }
 
   .rsvp-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+
+  .remaining {
+    font-size: 0.85rem;
+  }
+
+  /* Make the cards stack vertically on small phones */
+  .choice-row {
+    flex-direction: column;
+  }
+
+  .choice-card {
+    width: 100%;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
   }
 }
+

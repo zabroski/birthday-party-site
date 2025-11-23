@@ -6,7 +6,7 @@
 
 .party-details h2 {
   font-size: 2rem;
-  color: #ff69b4;
+ color: #f53646;
   margin-bottom: 25px;
   font-family: "Poppins", sans-serif;
 }
@@ -21,7 +21,7 @@
   padding: 30px 40px;
   box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
   max-width: 400px;
-  color: #444;
+   color: #020202;
   transition: all 0.3s ease;
 }
 

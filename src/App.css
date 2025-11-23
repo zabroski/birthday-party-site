@@ -1,9 +1,4 @@
-.hero {
-  background: linear-gradient(135deg, #ffb6c1, #ffd700);
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-}
+
 form {
   display: flex;
   flex-direction: column;

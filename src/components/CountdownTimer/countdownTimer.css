@@ -1,57 +1,106 @@
 .countdown {
   text-align: center;
-  margin: 50px auto;
+  margin: 40px auto;
   font-family: "Poppins", sans-serif;
-  color: #333;
+  padding: 0 16px;
 }
 
-.countdown h3 {
-  font-size: 1.8rem;
-  color: #ff4081;
+/* Title */
+.countdown-title {
+  font-size: 1.7rem;
+  color: #f53646;
   margin-bottom: 20px;
 }
 
-.time-box {
-  display: inline-flex;
-  gap: 15px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 15px 25px;
-  border-radius: 30px;
-  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.25);
-  font-size: 1.2rem;
+/* Grid of time cards */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(70px, 1fr));
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.time-box span {
-  font-weight: 600;
+/* Each time card */
+.time-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 12px 8px;
+  box-shadow: 0 6px 20px rgba(152, 29, 29, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Number */
+.time-value {
+  font-size: 1.8rem;
+  font-weight: 700;
   background: linear-gradient(135deg, #ff69b4, #ff85c1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
 }
 
+/* Label */
+.time-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Finished text */
 .countdown-finished {
-  text-align: center;
   font-size: 1.4rem;
-  color: #ff4fa3;
+  color: #f53646;
   font-weight: bold;
 }
 
-/* Responsive */
+/* Tablet and small laptop */
 @media (max-width: 768px) {
-  .countdown h3 {
+  .countdown-title {
+    font-size: 1.5rem;
+  }
+
+  .time-grid {
+    grid-template-columns: repeat(2, minmax(90px, 1fr));
+    gap: 14px;
+  }
+
+  .time-card {
+    padding: 12px 10px;
+  }
+
+  .time-value {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .countdown {
+    margin: 30px auto;
+  }
+
+  .countdown-title {
+    font-size: 1.3rem;
+  }
+
+  .time-grid {
+    gap: 10px;
+  }
+
+  .time-card {
+    border-radius: 14px;
+    padding: 10px 8px;
+  }
+
+  .time-value {
     font-size: 1.4rem;
   }
 
-  .time-box {
-    font-size: 1rem;
-    gap: 10px;
-    padding: 10px 18px;
+  .time-label {
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 480px) {
-  .time-box {
-    flex-direction: column;
-    border-radius: 15px;
-    gap: 5px;
-  }
-}
