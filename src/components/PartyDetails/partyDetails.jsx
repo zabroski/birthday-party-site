@@ -9,7 +9,7 @@ const PartyDetails = () => (
     initial={{ opacity: 0, y: 60 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
-    viewport={{ once: true }}
+    viewport={{ once: true }}                                                                                         
   >
     <h2>🎧 Party Details</h2>
 

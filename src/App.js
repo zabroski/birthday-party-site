@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       {/* 🔔 Big popup notice on page load */}
-      <LimitedPartyNotice />
+      {/* <LimitedPartyNotice /> */}
 
       <HeroSection />
       <CountdownTimer />
